@@ -1,0 +1,21 @@
+import random
+repeat = 'yes'
+while (repeat == 'yes'):
+#Computar chooses a number between 1 through 10.
+  number = random.randint(1, 10)
+#Players guess
+  guess = None
+# '!=' means not equal to, if the operands on either side are not equal, it returns True; if they are, it returns False. 
+  while guess != number:
+      guess = input("Pick a number! Any number! (1-10): ")
+      guess = int(guess)
+
+      if guess == number:
+          print('------------------')
+          print("You got it!")
+          repeat=input("Want to play again? ")
+          break
+      else:
+          print('------------------')
+          print("Nope, try again!")
+print("Thanks for playing!")
